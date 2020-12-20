@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FB81E36D-4D2B-4CD6-9206-06E46A151D2D}</ProjectGuid>
+    <ProjectGuid>{E18E2622-4A41-4EC3-8B41-F7ACF83634F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestProject1</RootNamespace>
-    <AssemblyName>UnitTestProject1</AssemblyName>
+    <RootNamespace>Zadanie2UnitTests</RootNamespace>
+    <AssemblyName>Zadanie2UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -60,6 +60,13 @@
       <Project>{c7db32be-6ea9-4eaa-af96-cb5efff46d38}</Project>
       <Name>Zadanie1</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Zadanie2\Zadanie2.csproj">
+      <Project>{1b9ed40b-1281-4163-9d43-ff25f712dff6}</Project>
+      <Name>Zadanie2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
