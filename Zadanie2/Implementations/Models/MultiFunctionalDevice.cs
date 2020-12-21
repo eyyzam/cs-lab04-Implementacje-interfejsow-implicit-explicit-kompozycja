@@ -18,12 +18,21 @@ namespace Zadanie2.Implementations.Models
 		{
 			if (State != IDevice.State.On) return;
 
-			Console.WriteLine($@"{DateTime.Now} Fax: {document.GetFileName()} wysłany do: {faxNumber}");
+			if (string.IsNullOrEmpty(faxNumber))
+				throw new ArgumentNullException();
+
+			if (!RecipientList.Contains(faxNumber))
+				RecipientList.Add(faxNumber);
+
+			Console.WriteLine($@"{DateTime.Now} Fax: {document.GetFileName()} sent to: {faxNumber}");
 			FaxCounter++;
 		}
 
 		public void ScanAndSendFax(string faxNumber)
 		{
+			if (string.IsNullOrEmpty(faxNumber))
+				throw new ArgumentNullException();
+
 			Scan(out var document);
 			Fax(document, faxNumber);
 		}

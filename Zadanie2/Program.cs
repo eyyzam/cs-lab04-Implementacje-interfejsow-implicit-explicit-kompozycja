@@ -14,8 +14,7 @@ namespace Zadanie2
 			IDocument document = new PDFDocument("jakis_plik.pdf");
 			device.Print(in document);
 
-			IDocument document2;
-			device.Scan(out document2);
+			device.Scan(out _);
 			device.ScanAndPrint();
 
 			device.Fax(document, "+48515266034");

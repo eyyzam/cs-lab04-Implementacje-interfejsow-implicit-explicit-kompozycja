@@ -1,4 +1,5 @@
-﻿using CopierProject.Implementations.Interfaces;
+﻿using System;
+using CopierProject.Implementations.Interfaces;
 using CopierProject.Implementations.Models;
 
 namespace CopierProject
@@ -16,9 +17,11 @@ namespace CopierProject
 			xerox.Scan(out doc2);
 
 			xerox.ScanAndPrint();
-			System.Console.WriteLine(xerox.Counter);
-			System.Console.WriteLine(xerox.PrintCounter);
-			System.Console.WriteLine(xerox.ScanCounter);
+			Console.WriteLine(xerox.Counter);
+			Console.WriteLine(xerox.PrintCounter);
+			Console.WriteLine(xerox.ScanCounter);
+
+			Console.ReadLine();
 		}
     }
 }
