@@ -44,7 +44,7 @@ namespace Zadanie3.Implementations.Models
 			_scanner.PowerOff();
 		}
 
-		public void Print(IDocument document)
+		public void Print(in IDocument document)
 		{
 			if (State != IDevice.State.On) return;
 
